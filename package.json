@@ -1,0 +1,16 @@
+{
+  "name": "bookmark-landing-page",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+  },
+  "keywords": [],
+  "author": "Dorottya Balogh",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^3.1.8"
+  }
+}
