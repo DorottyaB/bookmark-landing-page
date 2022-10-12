@@ -3,8 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,7 +14,7 @@
     <title>Bookmark landing page</title>
   </head>
   <body class="min-h-screen">
-    <nav class="flex flex-col px-7 py-10">
+    <nav class="flex flex-col px-7 py-10 lg:flex-row md:px-20 lg:px-20 xl:px-40">
       <div class="w-full flex justify-between items-center">
         <a href="#" title="Bookmark homepage">
           <svg class="logo" width="148" height="25" xmlns="http://www.w3.org/2000/svg">
@@ -40,28 +38,39 @@
         </a>
         <div>
           <img
+            class="hidden"
             id="mobile-nav-icon"
             src="./images/icon-hamburger.svg"
             alt="Mobile navigation icon"
           />
         </div>
       </div>
-      <div class="nav-items flex-col items-center justify-between h-full hidden">
-        <ul class="text-center text-white w-full text-xl">
-          <li class="py-6 border-t-[1px] border-slate-500">
-            <a class="uppercase tracking-widest" href="#">Features</a>
+      <div class="nav-items flex-col items-center justify-between h-full hidden lg:flex">
+        <ul
+          class="text-center text-white w-full text-xl lg:text-darkBlue lg:text-[13px] lg:flex lg:flex-row lg:gap-14 lg:items-center"
+        >
+          <li
+            class="py-6 border-t-[1px] border-slate-500 lg:border-none lg:py-0 lg:hover:text-softRed"
+          >
+            <a class="uppercase tracking-widest lg:font-medium" href="#">Features</a>
           </li>
-          <li class="py-6 border-t-[1px] border-slate-500">
-            <a class="uppercase tracking-widest" href="#">Pricing</a>
+          <li
+            class="py-6 border-t-[1px] border-slate-500 lg:border-none lg:py-0 lg:hover:text-softRed"
+          >
+            <a class="uppercase tracking-widest lg:font-medium" href="#">Pricing</a>
           </li>
-          <li class="py-6 mb-6 border-y-[1px] border-slate-500">
-            <a class="uppercase tracking-widest" href="#">Contact</a>
+          <li
+            class="py-6 mb-6 border-y-[1px] border-slate-500 lg:border-none lg:mb-0 lg:py-0 lg:hover:text-softRed"
+          >
+            <a class="uppercase tracking-widest lg:font-medium" href="#">Contact</a>
           </li>
-          <li class="py-3 border-2 border-white rounded-md">
-            <a class="uppercase tracking-widest" href="#">Login</a>
-          </li>
+          <button
+            class="w-full uppercase tracking-widest lg:font-medium py-3 border-2 border-white rounded-md lg:border-transparent lg:text-white lg:bg-softRed lg:py-2 lg:px-8 lg:shadow-md lg:hover:text-softRed lg:hover:bg-transparent lg:hover:border-softRed lg:hover:cursor-pointer"
+          >
+            Login
+          </button>
         </ul>
-        <div class="flex gap-9 mt-7">
+        <div class="flex gap-9 mt-7 lg:hidden">
           <a href="http://facebook.com"
             ><img src="./images/icon-facebook.svg" alt="Facebook logo"
           /></a>
@@ -72,21 +81,26 @@
       </div>
     </nav>
 
-    <header class="pb-16">
-      <div class="bg-hero-pattern bg-no-repeat bg-right-bottom mt-10 mb-16">
-        <img src="./images/illustration-hero.svg" alt="Screen illustration" />
+    <header class="pb-16 lg:pt-9 lg:flex lg:justify-between lg:gap-7">
+      <div
+        class="bg-hero-pattern bg-no-repeat bg-right-bottom mt-10 mb-16 lg:bg-70% lg:flex lg:justify-end lg:order-2 lg:flex-1"
+      >
+        <img src="./images/illustration-hero.svg" alt="Screen illustration" class="lg:mr-12" />
       </div>
-      <div class="text-center px-7">
-        <h1 class="text-3xl font-medium leading-10">
+      <div
+        class="text-center px-7 md:px-40 lg:px-0 lg:pl-20 xl:pl-40 lg:text-left lg:max-w-[700px] lg:self-center lg:flex-1"
+      >
+        <h1 class="text-3xl font-medium leading-10 lg:text-5xl">
           A Simple Bookmark<br />
           Manager
         </h1>
-        <p class="text-grayishBlue text-[15px] leading-6 mt-5 mb-8">
+        <p class="text-grayishBlue text-[15px] leading-6 mt-5 mb-8 lg:text-lg lg:mt-7 lg:mb-9">
           A clean and simple interface to organize your favourite websites. Open a new browser tab
-          and see your sites load instantly. Try it for free.
+          and see your sites load instantly. Try it<br />
+          for free.
         </p>
         <button
-          class="mr-2 text-sm font-medium p-3 w-36 border-2 border-transparent rounded-md shadow-md bg-softBlue text-white transition-all lg:hover:bg-transparent lg:hover:border-2 lg:hover:border-softBlue lg:hover:text-softBlue active:scale-95"
+          class="mr-2 text-sm font-medium p-3 w-36 border-2 border-transparent rounded-md shadow-md bg-softBlue text-white transition-all lg:mr-3 lg:hover:bg-transparent lg:hover:border-2 lg:hover:border-softBlue lg:hover:text-softBlue active:scale-95"
         >
           Get it on Chrome
         </button>
@@ -98,16 +112,18 @@
       </div>
     </header>
 
-    <main class="pt-16">
+    <main class="pt-16 lg:pt-2">
       <section>
-        <div class="text-center px-7">
-          <h2 class="text-2xl font-medium">Features</h2>
-          <p class="text-grayishBlue text-[15px] leading-6 mt-3">
+        <div class="text-center px-7 md:px-40 lg:px-80 xl:px-[450px]">
+          <h2 class="text-2xl font-medium lg:text-[32px]">Features</h2>
+          <p class="text-grayishBlue text-[15px] leading-6 mt-3 lg:text-lg lg:mt-6">
             Our aim is to make it quick and easy for you to access your favourite websites. Your
             bookmarks sync between your devices so you can access them on the go.
           </p>
         </div>
-        <div class="flex flex-col text-center my-10 px-7">
+        <div
+          class="flex flex-col text-center my-10 px-7 md:px-40 lg:mt-14 lg:flex-row lg:justify-center"
+        >
           <input
             type="radio"
             class="features-radio"
@@ -115,30 +131,46 @@
             id="simpleBookmarking"
             checked
           />
-          <label for="simpleBookmarking" class="border-y-[1px] border-slate-400 py-4 relative">
+          <label
+            for="simpleBookmarking"
+            class="border-y-[1px] border-slate-400 py-4 relative lg:border-t-0 lg:w-60 lg:pb-7 lg:hover:cursor-pointer"
+          >
             Simple Bookmarking
           </label>
           <input type="radio" class="features-radio" name="features" id="speedySearching" />
-          <label for="speedySearching" class="border-b-[1px] border-slate-400 py-4 relative">
+          <label
+            for="speedySearching"
+            class="border-b-[1px] border-slate-400 py-4 relative lg:w-60 lg:pb-7 lg:hover:cursor-pointer"
+          >
             Speedy Searching
           </label>
           <input type="radio" class="features-radio" name="features" id="easySharing" />
-          <label for="easySharing" class="border-b-[1px] border-slate-400 py-4 relative">
+          <label
+            for="easySharing"
+            class="border-b-[1px] border-slate-400 py-4 relative lg:w-60 lg:pb-7 lg:hover:cursor-pointer"
+          >
             Easy Sharing
           </label>
         </div>
-        <div class="">
-          <div class="bg-bg-pattern bg-no-repeat bg-left-bottom mt-20 pb-12 text-center">
+        <div class="lg:grid lg:grid-cols-2 lg:items-center lg:gap-6 lg:pb-16">
+          <div
+            class="bg-bg-pattern bg-no-repeat bg-left-bottom mt-20 pb-12 text-center lg:pb-24 lg:mt-10 lg:bg-80% lg:flex lg:justify-end"
+          >
             <img
               id="features-image"
-              class="px-7"
+              class="px-7 md:px-40 lg:px-0"
               src="./images/illustration-features-tab-1.svg"
               alt="Screen illustration"
             />
           </div>
-          <div class="text-center my-11 px-7">
-            <h2 id="features-title" class="text-2xl font-medium">Bookmark in one click</h2>
-            <p id="features-text" class="text-grayishBlue text-[15px] leading-6 mt-3 mb-4">
+          <div class="text-center my-11 px-7 md:px-40 lg:pl-28 lg:pr-36 lg:text-left">
+            <h2 id="features-title" class="text-2xl font-medium lg:text-[32px]">
+              Bookmark in one click
+            </h2>
+            <p
+              id="features-text"
+              class="text-grayishBlue text-[15px] leading-6 mt-3 mb-4 lg:text-lg lg:mt-7 lg:mb-8 lg:leading-7"
+            >
               Organize your bookmarks however you like. Our simple drag-and-drop interface gives you
               complete control over how you manage your favourite sites.
             </p>
@@ -151,83 +183,85 @@
         </div>
       </section>
 
-      <section class="py-12">
-        <div class="text-center px-7">
-          <h2 class="text-2xl font-medium">Download the extension</h2>
-          <p class="text-grayishBlue text-[15px] leading-6 mt-3">
+      <section class="py-12 lg:py-20">
+        <div class="text-center px-7 md:px-0 md:mx-auto md:max-w-[541px]">
+          <h2 class="text-2xl font-medium lg:text-[32px]">Download the extension</h2>
+          <p class="text-grayishBlue text-[15px] leading-6 mt-3 lg:text-lg lg:mt-6 lg:leading-7">
             We've got more browsers in the pipeline. Please do let us know if you've got a favourite
             you'd like us to prioritize.
           </p>
         </div>
 
-        <div
-          class="card my-10 flex flex-col items-center justify-center gap-7 w-[280px] h-[371px] mx-auto shadow-lg rounded-md"
-        >
-          <div>
-            <img src="./images/logo-chrome.svg" alt="Chrome logo" />
-          </div>
-          <div>
-            <h3 class="text-xl mb-2">Add to Chrome</h3>
-            <p class="text-grayishBlue text-[15px]">Minimum version 62</p>
-          </div>
-          <img src="./images/bg-dots.svg" alt="" />
-          <button
-            class="bg-softBlue -mb-5 px-8 py-3 rounded-md text-white text-sm border-2 border-transparent transition-all lg:hover:bg-transparent lg:hover:border-2 lg:hover:border-softBlue lg:hover:text-softBlue active:scale-95"
+        <div class="lg:flex lg:justify-center lg:gap-10 lg:mt-14">
+          <div
+            class="card my-10 flex flex-col items-center justify-center gap-7 w-[280px] h-[371px] mx-auto shadow-lg rounded-md lg:mx-0 lg:mt-0"
           >
-            Add & Install Extension
-          </button>
-        </div>
+            <div>
+              <img src="./images/logo-chrome.svg" alt="Chrome logo" />
+            </div>
+            <div>
+              <h3 class="text-xl mb-2">Add to Chrome</h3>
+              <p class="text-grayishBlue text-[15px]">Minimum version 62</p>
+            </div>
+            <img src="./images/bg-dots.svg" alt="" />
+            <button
+              class="bg-softBlue -mb-5 px-8 py-3 rounded-md text-white text-sm border-2 border-transparent transition-all lg:hover:bg-transparent lg:hover:border-2 lg:hover:border-softBlue lg:hover:text-softBlue active:scale-95"
+            >
+              Add & Install Extension
+            </button>
+          </div>
 
-        <div
-          class="card my-10 flex flex-col items-center justify-center gap-7 w-[280px] h-[371px] mx-auto shadow-lg rounded-md"
-        >
-          <div>
-            <img src="./images/logo-firefox.svg" alt="Firefox logo" />
-          </div>
-          <div>
-            <h3 class="text-xl mb-2">Add to Firefox</h3>
-            <p class="text-grayishBlue text-[15px]">Minimum version 55</p>
-          </div>
-          <img src="./images/bg-dots.svg" alt="" />
-          <button
-            class="bg-softBlue -mb-5 px-8 py-3 rounded-md text-white text-sm border-2 border-transparent transition-all lg:hover:bg-transparent lg:hover:border-2 lg:hover:border-softBlue lg:hover:text-softBlue active:scale-95"
+          <div
+            class="card my-10 flex flex-col items-center justify-center gap-7 w-[280px] h-[371px] mx-auto shadow-lg rounded-md lg:mx-0 lg:mt-10"
           >
-            Add & Install Extension
-          </button>
-        </div>
+            <div>
+              <img src="./images/logo-firefox.svg" alt="Firefox logo" />
+            </div>
+            <div>
+              <h3 class="text-xl mb-2">Add to Firefox</h3>
+              <p class="text-grayishBlue text-[15px]">Minimum version 55</p>
+            </div>
+            <img src="./images/bg-dots.svg" alt="" />
+            <button
+              class="bg-softBlue -mb-5 px-8 py-3 rounded-md text-white text-sm border-2 border-transparent transition-all lg:hover:bg-transparent lg:hover:border-2 lg:hover:border-softBlue lg:hover:text-softBlue active:scale-95"
+            >
+              Add & Install Extension
+            </button>
+          </div>
 
-        <div
-          class="card my-10 flex flex-col items-center justify-center gap-7 w-[280px] h-[371px] mx-auto shadow-lg rounded-md"
-        >
-          <div>
-            <img src="./images/logo-opera.svg" alt="Opera logo" />
-          </div>
-          <div>
-            <h3 class="text-xl mb-2">Add to Opera</h3>
-            <p class="text-grayishBlue text-[15px]">Minimum version 46</p>
-          </div>
-          <img src="./images/bg-dots.svg" alt="" />
-          <button
-            class="bg-softBlue -mb-5 px-8 py-3 rounded-md text-white text-sm border-2 border-transparent transition-all lg:hover:bg-transparent lg:hover:border-2 lg:hover:border-softBlue lg:hover:text-softBlue active:scale-95"
+          <div
+            class="card my-10 flex flex-col items-center justify-center gap-7 w-[280px] h-[371px] mx-auto shadow-lg rounded-md lg:mx-0 lg:mt-20"
           >
-            Add & Install Extension
-          </button>
+            <div>
+              <img src="./images/logo-opera.svg" alt="Opera logo" />
+            </div>
+            <div>
+              <h3 class="text-xl mb-2">Add to Opera</h3>
+              <p class="text-grayishBlue text-[15px]">Minimum version 46</p>
+            </div>
+            <img src="./images/bg-dots.svg" alt="" />
+            <button
+              class="bg-softBlue -mb-5 px-8 py-3 rounded-md text-white text-sm border-2 border-transparent transition-all lg:hover:bg-transparent lg:hover:border-2 lg:hover:border-softBlue lg:hover:text-softBlue active:scale-95"
+            >
+              Add & Install Extension
+            </button>
+          </div>
         </div>
       </section>
 
-      <section class="py-10 text-center">
-        <div class="text-center px-7">
-          <h2 class="text-2xl font-medium">Frequently Asked Questions</h2>
-          <p class="text-grayishBlue text-[15px] leading-6 mt-3">
+      <section class="py-10 text-center lg:max-w-[540px] lg:mx-auto lg:pb-32">
+        <div class="text-center px-7 md:px-0">
+          <h2 class="text-2xl font-medium lg:text-[32px]">Frequently Asked Questions</h2>
+          <p class="text-grayishBlue text-[15px] leading-6 mt-3 lg:text-lg lg:leading-7 lg:mt-6">
             Here are some of our FAQs. If you have any other questions you'd like answered please
             feel free to email us.
           </p>
         </div>
 
-        <div class="mt-12 px-7">
-          <div class="mb-5 pb-4 border-b border-gray-400">
+        <div class="mt-12 px-7 md:px-0 lg:mt-14">
+          <div class="mb-5 py-4 border-b border-gray-400 lg:border-y">
             <button
-              class="accordion w-full flex justify-between items-center transition-all text-[15px] lg:hover:text-softRed"
+              class="accordion w-full flex justify-between items-center transition-all text-[15px] lg:hover:text-softRed lg:text-lg"
             >
               What is Bookmark?
               <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="12">
@@ -235,7 +269,7 @@
               </svg>
             </button>
             <div class="py-3 text-left" hidden>
-              <p class="text-grayishBlue text-[15px] leading-7 tracking-wider">
+              <p class="text-grayishBlue text-[15px] leading-7 tracking-wider lg:text-base">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget
                 ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
               </p>
@@ -244,7 +278,7 @@
 
           <div class="mb-5 pb-4 border-b border-gray-400">
             <button
-              class="accordion w-full flex justify-between items-center transition-all text-[15px] lg:hover:text-softRed"
+              class="accordion w-full flex justify-between items-center transition-all text-[15px] lg:hover:text-softRed lg:text-lg"
             >
               How can I request a new browser?
               <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="12">
@@ -252,7 +286,7 @@
               </svg>
             </button>
             <div class="py-3 text-left" hidden>
-              <p class="text-grayishBlue text-[15px] leading-7 tracking-wider">
+              <p class="text-grayishBlue text-[15px] leading-7 tracking-wider lg:text-base">
                 Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non
                 ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies.
                 Mauris augue massa, ultricies non ligula. Suspendisse imperdie tVivamus luctus eros
@@ -264,7 +298,7 @@
 
           <div class="mb-5 pb-4 border-b border-gray-400">
             <button
-              class="accordion w-full flex justify-between items-center transition-all text-[15px] lg:hover:text-softRed"
+              class="accordion w-full flex justify-between items-center transition-all text-[15px] lg:hover:text-softRed lg:text-lg"
             >
               Is there a mobile app?
               <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="12">
@@ -272,7 +306,7 @@
               </svg>
             </button>
             <div class="py-3 text-left" hidden>
-              <p class="text-grayishBlue text-[15px] leading-7 tracking-wider">
+              <p class="text-grayishBlue text-[15px] leading-7 tracking-wider lg:text-base">
                 Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor,
                 ut condimentum urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet
                 pharetra purus. Sed sollicitudin ex et ultricies bibendum.
@@ -282,7 +316,7 @@
 
           <div class="mb-5 pb-4 border-b border-gray-400">
             <button
-              class="accordion w-full flex justify-between items-center transition-all text-[15px] lg:hover:text-softRed"
+              class="accordion w-full flex justify-between items-center transition-all text-[15px] lg:hover:text-softRed lg:text-lg"
             >
               What about other Chromium browsers?
               <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="12">
@@ -290,7 +324,7 @@
               </svg>
             </button>
             <div class="py-3 text-left" hidden>
-              <p class="text-grayishBlue text-[15px] leading-7 tracking-wider">
+              <p class="text-grayishBlue text-[15px] leading-7 tracking-wider lg:text-base">
                 Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod
                 dui. Aliquam vitae neque eget nisl gravida pellentesque non ut velit.
               </p>
@@ -298,23 +332,30 @@
           </div>
 
           <button
-            class="mt-6 text-sm font-medium p-3 w-28 border-2 border-transparent rounded-md shadow-md bg-softBlue text-white transition-all lg:hover:bg-transparent lg:hover:border-2 lg:hover:border-softBlue lg:hover:text-softBlue active:scale-95"
+            class="mt-6 text-sm font-medium p-3 w-28 border-2 border-transparent rounded-md shadow-md bg-softBlue text-white transition-all lg:mt-9 lg:hover:bg-transparent lg:hover:border-2 lg:hover:border-softBlue lg:hover:text-softBlue active:scale-95"
           >
             More Info
           </button>
         </div>
       </section>
 
-      <section>
-        <div class="bg-softBlue px-7 py-14 flex flex-col gap-5">
+      <section class="bg-softBlue lg:flex lg:justify-center">
+        <div class="px-7 md:px-40 py-14 flex flex-col gap-5 lg:px-0 lg:max-w-[442px]">
           <div class="text-white text-center">
-            <h4 class="text-xs uppercase tracking-[4.62px] leading-10">35,000+ already joined</h4>
-            <h3 class="text-2xl leading-7">Stay up-to-date with what we're doing</h3>
+            <h4 class="text-xs uppercase tracking-[4.62px] leading-10 lg:text-[13px]">
+              35,000+ already joined
+            </h4>
+            <h3 class="text-2xl leading-7 lg:text-[32px] lg:leading-10 lg:my-5">
+              Stay up-to-date with what we're doing
+            </h3>
           </div>
-          <form class="flex flex-col gap-4" novalidate>
-            <label class="opacity-0" for="email" aria-label="Email input"></label>
+          <form
+            class="flex flex-col gap-4 lg:grid lg:grid-cols-[300px_126px] lg:grid-rows-[48px_auto] relative"
+            novalidate
+          >
+            <label class="opacity-0 absolute" for="email" aria-label="Email input"></label>
             <input
-              class="rounded-md py-3 px-4 border-2 border-transparent focus-visible:outline-none focus-visible:border-2 focus-visible:border-grayishBlue"
+              class="rounded-md py-3 px-4 border-2 border-transparent focus-visible:outline-none focus-visible:border-2 focus-visible:border-grayishBlue lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-2"
               type="email"
               name="email"
               id="email"
@@ -322,11 +363,11 @@
               required
             />
             <div
-              class="invalid-tooltip hidden w-full rounded-b-md -mt-5 bg-softRed text-white text-[10px] italic"
+              class="invalid-tooltip hidden w-full rounded-b-md -mt-5 bg-softRed text-white text-[10px] italic lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-3"
             ></div>
             <button
               type="submit"
-              class="bg-softRed py-3 border-2 border-transparent rounded-md text-white text-sm transition-all lg:hover:bg-white lg:hover:border-2 lg:hover:border-softRed lg:hover:text-softRed active:scale-95"
+              class="bg-softRed py-3 border-2 border-transparent rounded-md text-white text-sm transition-all lg:hover:bg-white lg:hover:border-2 lg:hover:border-softRed lg:hover:text-softRed active:scale-95 lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2"
             >
               Contact Us
             </button>
@@ -335,8 +376,10 @@
       </section>
     </main>
 
-    <footer class="bg-darkBlue pt-11 pb-5 px-7 flex flex-col gap-7">
-      <div class="flex flex-col items-center gap-8">
+    <footer
+      class="bg-darkBlue pt-11 pb-5 px-7 md:px-40 flex flex-col gap-7 lg:flex-row lg:justify-between lg:items-center lg:py-12 lg:relative"
+    >
+      <div class="flex flex-col items-center gap-8 lg:flex-row lg:gap-16">
         <a href="#">
           <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
             <g fill="none" fill-rule="evenodd">
@@ -355,25 +398,33 @@
             </g>
           </svg>
         </a>
-        <div class="flex flex-col items-center gap-4 text-white text-[15px]">
-          <a class="uppercase tracking-wider" href="#">Features</a>
-          <a class="uppercase tracking-wider" href="#">Pricing</a>
-          <a class="uppercase tracking-wider" href="#">Contact</a>
+        <div
+          class="flex flex-col items-center gap-4 text-white text-[15px] lg:flex-row lg:text-[13px] lg:gap-11"
+        >
+          <a class="uppercase tracking-wider lg:hover:text-softRed" href="#">Features</a>
+          <a class="uppercase tracking-wider lg:hover:text-softRed" href="#">Pricing</a>
+          <a class="uppercase tracking-wider lg:hover:text-softRed" href="#">Contact</a>
         </div>
       </div>
 
-      <div class="flex justify-center gap-9 mt-7">
+      <div class="flex justify-center gap-9 mt-7 lg:mt-0">
         <a href="http://facebook.com"
           ><img src="./images/icon-facebook.svg" alt="Facebook logo"
         /></a>
         <a href="http://twitter.com"><img src="./images/icon-twitter.svg" alt="Twitter logo" /></a>
       </div>
 
-      <p class="text-xs text-gray-400 text-center">
+      <p class="text-xs text-gray-400 text-center lg:absolute lg:bottom-3 lg:right-40">
         Challenge by
-        <a class="text-softBlue" href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        <a
+          class="text-softBlue lg:hover:text-softRed"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a class="text-softBlue" href="https://github.com/DorottyaB/">Dorottya</a>.
+        >. Coded by
+        <a class="text-softBlue lg:hover:text-softRed" href="https://github.com/DorottyaB/"
+          >Dorottya</a
+        >.
       </p>
     </footer>
 

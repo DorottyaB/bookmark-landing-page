@@ -24,6 +24,10 @@ const features = [
   },
 ];
 
+if (window.innerWidth < 769) {
+  mobileNavIcon.classList.remove('hidden');
+}
+
 mobileNavIcon.addEventListener('click', () => {
   nav.classList.toggle('extended');
   nav.classList.contains('extended')

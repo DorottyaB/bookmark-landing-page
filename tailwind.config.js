@@ -19,6 +19,10 @@ module.exports = {
         'hero-pattern': "url('../images/background.svg')",
         'bg-pattern': "url('../images/background-rotated.svg')",
       },
+      backgroundSize: {
+        '70%': '70%',
+        '80%': '80%',
+      },
     },
   },
   plugins: [],
