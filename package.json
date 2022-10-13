@@ -1,7 +1,7 @@
 {
   "name": "bookmark-landing-page",
   "version": "1.0.0",
-  "main": "index.html",
+  "main": "tailwind.config.js",
   "scripts": {
     "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
     "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
