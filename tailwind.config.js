@@ -8,6 +8,19 @@ module.exports = {
       lg: '1024px',
       xl: '1440px',
     },
+    fontSize: {
+      xs: '12px',
+      sm: '13px',
+      button: '14px',
+      md: '15px',
+      base: '16px',
+      lg: '18px',
+      xl: '20px',
+      '2xl': '24px',
+      '3xl': '30px',
+      '4xl': '32px',
+      '5xl': '48px',
+    },
     extend: {
       colors: {
         softBlue: 'hsl(231, 69%, 60%)',
